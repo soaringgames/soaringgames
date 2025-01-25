@@ -11095,7 +11095,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11136,7 +11136,10 @@ body {
     font-size: 1.25rem;
   }
 }
-
+/* Add this CSS to your styles.css file */
+.clickable-area {
+  cursor: pointer;
+}
 .about-section {
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
@@ -11146,7 +11149,7 @@ body {
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding-bottom: 1rem;
 }
 .projects-section .featured-text {
   padding: 2rem;
