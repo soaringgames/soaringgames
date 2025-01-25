@@ -89,7 +89,7 @@ function startGame() {
         let dx = Math.random() * 4 - 2;
         let dy = Math.random() * 4 - 2;
         let color = 'red';
-        let radius = i === 0 ? 12.5 : Math.random() * 10 + 5
+        let radius = i === 0 ? 25 : Math.random() * 10 + 10;
         let ball = new Ball(canvas.width / 2, canvas.height / 2, dx, dy, radius, color);
         balls1.push(ball);
     }
@@ -98,7 +98,7 @@ function startGame() {
         let dx = Math.random() * 4 - 2;
         let dy = Math.random() * 4 - 2;
         let color = 'green';
-        let radius = Math.random() * 10 + 5;
+        let radius = Math.random() * 10 + 10;
         let ball = new Ball(canvas.width / 2, canvas.height / 2, dx, dy, radius, color);
         balls2.push(ball);
     }
@@ -127,13 +127,20 @@ function animateBalls() {
         }
     }
 
-    // Delete balls that touch the mouse object
+    // Delete balls that touch the mouse object and flash the screen for each deletion
+    const initialLength = balls2.length;
     balls2 = balls2.filter(ball => {
         const dx = ball.x - mouseX;
         const dy = ball.y - mouseY;
         const distance = Math.sqrt(dx * dx + dy * dy);
         return distance > 25; // Keep balls that are more than 20 pixels away from the mouse
-    });    
+    });
+    if (balls2.length < initialLength) {
+        canvas.style.backgroundColor = 'rgba(0, 20, 0)'; // Flash the screen green
+        setTimeout(() => {
+            canvas.style.backgroundColor = 'black';
+        }, 100);
+    }
 
     balls1.forEach(ball => {
         ball.draw();
@@ -156,6 +163,10 @@ function animateBalls() {
     mouseBall.update_mouse();
     
     if(gameOver) {
+        canvas.style.backgroundColor = 'rgba(40, 0, 0)';
+        setTimeout(() => {
+            canvas.style.backgroundColor = 'black';
+        }, 50);
         startGame();
         return;
     }
@@ -174,47 +185,23 @@ canvas.addEventListener('mousemove', function(event) {
 });
 
 function expandCanvas() {
-    document.querySelector("#click").pointerEvents = "none";
-
     const canvas = document.querySelector('#myCanvas');
-    let currentHeight = parseInt(canvas.style.height.slice(0, -2));
-    if(isNaN(currentHeight)) {
-        currentHeight = 0;
-    }
-
-    let vel = ((((-((currentHeight - 150) * (currentHeight - 150))) / 150) + 150) / 18) + 1;
-
-    canvas.style.height = (currentHeight + vel) + 'px';
-
-    if(currentHeight >= 300) {
-        canvas.style.height = '300px';
-        canvas.height = 300;
-        startGame();
-    } else {
-        setTimeout(() => {
-            expandCanvas();
-        }, 10);
-    }
+    const header = document.querySelector('#mainNav');
+    const form = document.getElementById('reveal');
+    form.style.display = 'none';
+    const headerHeight = header.offsetHeight;
+    const newCanvasHeight = window.innerHeight - headerHeight;
+    
+    canvas.style.height = newCanvasHeight + 'px';
+    canvas.height = newCanvasHeight;
+    startGame();
 }
 
 function expandContactForm() {
-    const form = document.querySelector('#signup');
+    const canvas = document.querySelector('#myCanvas');
+    canvas.style.height = '0px';
+    canvas.style.backgroundColor = 'rgba(0, 0, 0, 0)';
 
-    // Temporarily set the height to 'auto' and padding to the desired value to get the full height
-    form.style.height = 'auto';
-    const fullHeight = (form.offsetHeight + 10 * 2 * 16) + 'px';
-
-    // Reset the height and padding back to 0, then trigger the transition
-    form.style.height = '0';
-    form.style.padding = '0';
-    setTimeout(() => {
-        form.style.height = fullHeight;
-        form.style.padding = '10rem 0';
-    }, 0);
-
-    // Optionally, remove the height after the transition to allow for future content changes
-    form.addEventListener('transitionend', function handler() {
-        form.style.height = 'auto';
-        form.removeEventListener('transitionend', handler);
-    });
+    const form = document.getElementById('signup');
+    form.style.display = '';
 }
