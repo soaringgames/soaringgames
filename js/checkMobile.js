@@ -2,7 +2,7 @@ function isMobile() {
     return window.innerWidth <= 992;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener('DOMContentLoaded', event => {
     if (isMobile()) {
         // Hide the game and show the form
         document.getElementById('myCanvas').style.display = 'none';
