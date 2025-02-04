@@ -25,60 +25,74 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../wanda">Wanda</a></li>
                         <li class="nav-item"><a class="nav-link" href="../snarfles">Snarfles</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../study-arcade">Study Arcade</a></li>
                         <li class="nav-item"><a class="nav-link" href="../skydom">Skydom</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- About-->
+        <!-- Masthead-->
+        <header id="masthead" class="masthead-skydom" style="position: relative; overflow: hidden;">
+            <video autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
+                <source src="bg-masthead.mp4"/>
+            </video>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
+            <div class="container px-4 px-lg-5 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Skydom</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Fly High</h2>
+                <a class="btn btn-primary btn-xl" href="https://store.steampowered.com/app/1357400/Skydom/">
+                    <i class="fab fa-steam"></i> Steam
+                </a>
+            </div>
+        </header>
+        <!-- YouTube Section -->
+        <section class="about-section text-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">The Making of Skydom</h2>
+                    <p class="text-white-50">
+                        A behind-the-scenes look at the development of Skydom, 
+                        a childhood dream that evolved into a personal story about the danger of comfort and the fear of the unknown.
+                    </p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/82ZaN96Uvq0?si=koXSM_fgXTjV9ba3&autoplay=1&mute=1" title="Skydom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <!-- Masthead-->
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">Games that make you think</h2>
                         <p class="text-white-50">
-                            Game design is an art form that combines creativity, psychology, and technology. 
-                            We believe that games can be more than just entertainment. 
-                            They can be a way to learn, to grow, and to connect with others. 
-                            Our games are designed to challenge your mind, spark your curiosity, and inspire you to think in new ways. 
-                            We hope you enjoy playing them as much as we enjoyed making them.
+                            Play as a young hero in an epic campaign in this fantasy world. Face your fears and march into battle, or learn to tame and ride a dragon.
+                            Battle hordes of underlings and evil dragons. Protect the world with swords, bows, dragons, and grim determination.
+                            Explore and adventure. Find your own path in a rich and diverse world. Discover new challenges in your quest to defeat the overlord and his underlings.
                         </p>
                         <p class="text-white-50">
-                            This is a simple
-                            <a href="https://www.youtube.com">example link.</a>
-                            I don't need it right now but this is how you would go about that.
+                            please know that skydom is a small indie experience built by, well, just me, with a bit of help from my friends to build out the music and storyline. i'm just a college kid with big aspirations, but if you're looking for a hundred-hour aaa campaign, this game isn't for you. if, however, you're willing to enjoy a more personal experience that might not be as vast as others, i would love your support :)
+                            also know that your money isn't going to a big company who wants to line their pockets, it's going to a real person who just wants to survive college and make it in life ;)
                         </p>
                     </div>
                 </div>
-                <img class="img-fluid" src="../assets/img/ipad.png" alt="..." />
             </div>
-        </section>   
-        <!-- About-->
-        <section class="about-section text-center" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Games that make you think</h2>
-                        <p class="text-white-50">
-                            Game design is an art form that combines creativity, psychology, and technology. 
-                            We believe that games can be more than just entertainment. 
-                            They can be a way to learn, to grow, and to connect with others. 
-                            Our games are designed to challenge your mind, spark your curiosity, and inspire you to think in new ways. 
-                            We hope you enjoy playing them as much as we enjoyed making them.
-                        </p>
-                        <p class="text-white-50">
-                            This is a simple
-                            <a href="https://www.youtube.com">example link.</a>
-                            I don't need it right now but this is how you would go about that.
-                        </p>
-                    </div>
+        </section>
+        <!-- Steam Section -->
+        <section class="about-section text-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">Buy now on Steam</h2>
+                    <p class="text-white -50">
+                        Give it a try for the price of a cup of coffee.
+                    </p>
+                    <a class="btn btn-primary btn-xl" href="https://store.steampowered.com/app/1357400/Skydom/">
+                        <i class="fab fa-steam"></i> Steam
+                    </a>
                 </div>
-                <img class="img-fluid" src="../assets/img/ipad.png" alt="..." />
             </div>
-        </section>     
+        </section>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Soaring Games <script>document.write(new Date().getFullYear());</script></div></footer>
         <!-- Bootstrap core JS-->
