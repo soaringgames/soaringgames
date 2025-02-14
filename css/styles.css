@@ -2787,7 +2787,6 @@ input:hover, .card:hover {
   z-index: 10; /* Ensure it is above other elements */
   width: 100%; /* Full width */
   height: 0; /* Start with height 0 */
-  transition: height 1.0s ease; /* Smooth transition for height */
 }
 
 .btn {
@@ -11223,7 +11222,7 @@ body {
   cursor: pointer;
 }
 .about-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
   background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 .about-section p {

@@ -82,6 +82,7 @@ let balls1 = [];
 let balls2 = [];
 
 function startGame() {  
+    canvas.style.backgroundColor = 'rgba(0, 0, 0, 0)';
     balls1 = [];
     balls2 = [];
 
@@ -97,7 +98,7 @@ function startGame() {
     for (let i = 0; i < 10; i++) {
         let dx = Math.random() * 4 - 2;
         let dy = Math.random() * 4 - 2;
-        let color = 'green';
+        let color = '#16899d';
         let radius = Math.random() * 10 + 10;
         let ball = new Ball(canvas.width / 2, canvas.height / 2, dx, dy, radius, color);
         balls2.push(ball);
@@ -136,9 +137,9 @@ function animateBalls() {
         return distance > 25; // Keep balls that are more than 20 pixels away from the mouse
     });
     if (balls2.length < initialLength) {
-        canvas.style.backgroundColor = 'rgba(0, 20, 0)'; // Flash the screen green
+        canvas.style.backgroundColor = 'rgba(0, 255, 0, 0.1)'; // Flash the screen green
         setTimeout(() => {
-            canvas.style.backgroundColor = 'black';
+            canvas.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         }, 100);
     }
 
@@ -163,11 +164,10 @@ function animateBalls() {
     mouseBall.update_mouse();
     
     if(gameOver) {
-        canvas.style.backgroundColor = 'rgba(40, 0, 0)';
+        canvas.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
         setTimeout(() => {
-            canvas.style.backgroundColor = 'black';
-        }, 50);
-        startGame();
+            startGame();
+        }, 250);
         return;
     }
 
@@ -187,11 +187,11 @@ canvas.addEventListener('mousemove', function(event) {
 function expandCanvas() {
     const canvas = document.querySelector('#myCanvas');
     const header = document.querySelector('#mainNav');
-    const form = document.getElementById('reveal');
-    form.style.display = 'none';
     const headerHeight = header.offsetHeight;
     const newCanvasHeight = window.innerHeight - headerHeight;
-    
+    document.getElementById('header-text').style.display = 'none';
+    document.getElementById('reveal').style.display = 'none';
+
     canvas.style.height = newCanvasHeight + 'px';
     canvas.height = newCanvasHeight;
     startGame();
@@ -200,8 +200,6 @@ function expandCanvas() {
 function expandContactForm() {
     const canvas = document.querySelector('#myCanvas');
     canvas.style.height = '0px';
-    canvas.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-
-    const form = document.getElementById('signup');
-    form.style.display = '';
+    document.getElementById('header-text').style.display = '';
+    document.getElementById('signup').style.display = '';
 }
