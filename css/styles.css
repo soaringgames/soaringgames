@@ -3055,7 +3055,14 @@ input:hover, .card:hover {
 .image2-section {
   position: relative;
   background: linear-gradient(to top, #007BFF 0%, #82C4E6 50%, #E0F7FA 100%);
-  /* Gradient resembling the sky from horizon to zenith */
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.read-section {
+  position: relative;
   padding: 3rem 0;
   display: flex;
   justify-content: center;
@@ -11225,10 +11232,6 @@ body {
   padding-top: 5rem;
   background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
-.about-section p {
-  margin-bottom: 5rem;
-}
-
 .projects-section {
   padding-bottom: 1rem;
 }

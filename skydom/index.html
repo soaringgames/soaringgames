@@ -32,11 +32,12 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header id="masthead" class="masthead-skydom" style="position: relative; overflow: hidden;">
-            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
+        <header class="masthead-skydom">
+            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: blur(5px);">
                 <source src="bg-masthead.mp4"/>
             </video>
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 90%); z-index: -1;"></div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 40%); z-index: -1;"></div>
             <div class="container px-4 px-lg-5 h-100 d-flex flex-column justify-content-center align-items-center text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Skydom</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">Fly High</h2>
@@ -45,8 +46,23 @@
                 </a>
             </div>
         </header>
+        <!-- Masthead-->
+        <section class="read-section text-center bg-dark">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">The Story</h2>
+                        <p class="text-white-50">
+                            Play as a young hero in an epic campaign in this fantasy world. Face your fears and march into battle, or learn to tame and ride a dragon.
+                            Battle hordes of underlings and evil dragons. Protect the world with swords, bows, dragons, and grim determination.
+                            Explore and adventure. Find your own path in a rich and diverse world. Discover new challenges in your quest to defeat the overlord and his underlings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>        
         <!-- YouTube Section -->
-        <section class="about-section text-center">
+        <section class="read-section text-center" style="background: linear-gradient(to top, #520000 50%, #212529 100%);">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8">
                     <h2 class="text-white mb-4">The Making of Skydom</h2>
@@ -54,47 +70,85 @@
                         A behind-the-scenes look at the development of Skydom, 
                         a childhood dream that evolved into a personal story about the danger of comfort and the fear of the unknown.
                     </p>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/82ZaN96Uvq0?si=koXSM_fgXTjV9ba3&autoplay=1&mute=1" title="Skydom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="embed-responsive embed-responsive-16by9" style="width: 90%; max-width: 560px; margin: 0 auto;">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/82ZaN96Uvq0?si=koXSM_fgXTjV9ba3&autoplay=1&mute=1" title="Skydom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-        </section>        
-        <!-- Masthead-->
-        <section class="about-section text-center" id="about">
+        </section>
+        <!-- GIF Section-->
+        <section class="read-section text-center bg-dark">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Games that make you think</h2>
+                        <h2 class="text-white mb-4">Gameplay</h2>
                         <p class="text-white-50">
-                            Play as a young hero in an epic campaign in this fantasy world. Face your fears and march into battle, or learn to tame and ride a dragon.
-                            Battle hordes of underlings and evil dragons. Protect the world with swords, bows, dragons, and grim determination.
-                            Explore and adventure. Find your own path in a rich and diverse world. Discover new challenges in your quest to defeat the overlord and his underlings.
+                            A sneak peek at the gameplay of Skydom. 
+                            Fly high, ride dragons, and battle evil in this epic fantasy world.
                         </p>
-                        <p class="text-white-50">
-                            please know that skydom is a small indie experience built by, well, just me, with a bit of help from my friends to build out the music and storyline. i'm just a college kid with big aspirations, but if you're looking for a hundred-hour aaa campaign, this game isn't for you. if, however, you're willing to enjoy a more personal experience that might not be as vast as others, i would love your support :)
-                            also know that your money isn't going to a big company who wants to line their pockets, it's going to a real person who just wants to survive college and make it in life ;)
-                        </p>
+                        <h4 class="text-white-50" style="margin-top:3rem;">Dragon Riding</h4>
+                        <p class="text-white-50">Would you like to ride a dragon?</p>
+                        <img class="img-fluid" src="dragon.gif" alt="Gameplay" />
+                        <h4 class="text-white-50" style="margin-top:3rem;">Archery</h4>
+                        <p class="text-white-50">Nice Shot!</p>
+                        <img class="img-fluid" src="archery.gif" alt="Gameplay" />
+                        <h4 class="text-white-50" style="margin-top:3rem;">Swordfighting</h4>
+                        <p class="text-white-50">This can get intense...</p>
+                        <img class="img-fluid" src="sword.gif" alt="Gameplay" />
+                        <h4 class="text-white-50" style="margin-top:3rem;">Exploration</h4>
+                        <p class="text-white-50">It's a big world out there!</p>
+                        <img class="img-fluid" src="explore.gif" alt="Gameplay" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section-->
+         <section class="read-section bg-light">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mb-4">Features</h2>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-4 mb-5">
+                        <div class="feature-item">
+                            <i class="fas fa-dragon text-primary"></i>
+                            <h3>Dragons</h3>
+                            <p class="text-muted">Tame and ride dragons. Battle evil dragons. Protect the world with dragons.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="feature-item">
+                            <i class="fas fa-gun text-primary"></i>
+                            <h3>Weapons</h3>
+                            <p class="text-muted">Use swords, bows, and other weapons to defeat the overlord and his underlings.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="feature-item">
+                            <i class="fas fa-map text-primary"></i>
+                            <h3>World</h3>
+                            <p class="text-muted">Explore and adventure. Find your own path in a new world.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Steam Section -->
-        <section class="about-section text-center">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="text-white mb-4">Buy now on Steam</h2>
-                    <p class="text-white -50">
-                        Give it a try for the price of a cup of coffee.
-                    </p>
-                    <a class="btn btn-primary btn-xl" href="https://store.steampowered.com/app/1357400/Skydom/">
-                        <i class="fab fa-steam"></i> Steam
-                    </a>
+        <section class="about-section text-center" style="overflow-x: hidden;">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Available on Steam</h2>
+                        <p class="text-white-50">
+                            Give it a try for the price of a cup of coffee.
+                        </p>
+                        <a class="btn btn-primary btn-xl" href="https://store.steampowered.com/app/1357400/Skydom/">
+                            <i class="fab fa-steam"></i> Steam
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Soaring Games <script>document.write(new Date().getFullYear());</script></div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Soaring Games LLC, <script>document.write(new Date().getFullYear());</script></div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
