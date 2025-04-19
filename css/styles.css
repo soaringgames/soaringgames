@@ -3045,7 +3045,6 @@ input:hover, .card:hover {
 .image-section {
   position: relative;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  /* Adjust the gradient colors and stops as needed */
   padding: 3rem 0;
   display: flex;
   justify-content: center;
@@ -3055,6 +3054,15 @@ input:hover, .card:hover {
 .image2-section {
   position: relative;
   background: linear-gradient(to top, #007BFF 0%, #82C4E6 50%, #E0F7FA 100%);
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image3-section {
+  position: relative;
+  background: radial-gradient(circle, rgba(253, 218, 117, 0.8) 30%, rgba(0, 0, 0, 0.8) 100%);
   padding: 3rem 0;
   display: flex;
   justify-content: center;
